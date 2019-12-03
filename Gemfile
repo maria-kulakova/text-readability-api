@@ -29,6 +29,7 @@ gem 'language_detection', '~> 0.0.2'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt', '~> 2.2', '>= 2.2.1'
 gem 'simple_command', '~> 0.1.0'
+gem 'cancancan', '~> 3.0', '>= 3.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

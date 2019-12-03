@@ -1,4 +1,5 @@
 class TextsController < ApplicationController
+  load_and_authorize_resource
 
   def create
     content = text_params[:content]
