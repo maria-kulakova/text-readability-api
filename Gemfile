@@ -26,11 +26,14 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'rack-cors'
 
 gem 'language_detection', '~> 0.0.2'
+gem 'bcrypt', '~> 3.1.7'
+gem 'jwt', '~> 2.2', '>= 2.2.1'
+gem 'simple_command', '~> 0.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry', '~> 0.12.2'
-  gem 'pry-nav', '~> 0.3.0' 
+  gem 'pry-nav', '~> 0.3.0'
 end
 
 group :development do
