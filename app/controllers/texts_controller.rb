@@ -1,18 +1,20 @@
 class TextsController < ApplicationController
   load_and_authorize_resource
 
-  def create
-    content = text_params[:content]
+  def index
+    @texts = Text.where(user: current_user)
 
-    result = ReadabilityIndexCalculator.call(content)
+    render json: { texts: @texts }
+  end
 
-    if result.success?
-      Text.create(content: content, complexity_score: result.readability_index)
+  def show
+    @text = Text.find(params[:id])
 
-      render json: { message: 'Successfuly created!' }
-    else
-      render json: { error: result.error }
+    if @text.user == current_user
+      render json: { text: @text } and return
     end
+
+    render json: { message: 'Text is not found' }
   end
 
   private
