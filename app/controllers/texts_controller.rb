@@ -4,14 +4,14 @@ class TextsController < ApplicationController
   def index
     @texts = Text.where(user: current_user)
 
-    render json: { texts: @texts }
+    render json: @texts
   end
 
   def show
     @text = Text.find(params[:id])
 
     if @text.user == current_user
-      render json: { text: @text } and return
+      render json: @text and return
     end
 
     render json: { message: 'Text is not found' }

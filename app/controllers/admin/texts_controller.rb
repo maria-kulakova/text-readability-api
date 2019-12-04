@@ -4,7 +4,7 @@ class Admin::TextsController < ApplicationController
   def index
     if current_user.admin?
       @texts = Text.all
-      render json: { texts: @texts } and return
+      render json: @texts and return
     end
 
     render json: { message: 'Texts are not found' }
@@ -13,7 +13,7 @@ class Admin::TextsController < ApplicationController
   def show
     if current_user.admin?
       @text = Text.find(params[:id])
-      render json: { text: @text } and return
+      render json: @text and return
     end
 
     render json: { message: 'Text is not found' }

@@ -12,6 +12,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jwt', '~> 2.2', '>= 2.2.1'
 gem 'simple_command', '~> 0.1.0'
 gem 'cancancan', '~> 3.0', '>= 3.0.1'
+gem 'active_model_serializers', '~> 0.10.10'
 
 group :development, :test do
   gem 'pry', '~> 0.12.2'
