@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 gem 'rails', '~> 6.0.1'
 gem 'mysql2', '>= 0.4.4'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'language_detection', '~> 0.0.2'
 gem 'bcrypt', '~> 3.1.7'
